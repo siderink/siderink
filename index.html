@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo de Poleras</title>
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PIXELYPIGMENTO - Catálogo de Poleras</title>
+
 </head>
 <body>
 <header>
-  <h1>Pixel y Pigmento</h1>
+<h1>PIXELYPIGMENTO SpA</h1>
+<p>Estampado profesional de poleras, tazas, cojines y más</p>
 </header>
-<section class="catalogo">
-  <div class="item">
-    <img src="img/polera-demo.png" alt="Polera de ejemplo">
-    <h3>Polera Ejemplo</h3>
-    <p>$9.990</p>
-  </div>
+
+
+<section class="hero">
+<h2>Diseños Únicos y Personalizados</h2>
+<p>Añade tus propias imágenes y agranda tu catálogo en segundos.</p>
 </section>
+
+
+<section class="catalogo">
+<div class="item" >
+<img src="img/polera1.jpg" alt="Polera 1" />
+<h3>Polera Modelo 1</h3>
+</div>
+
+
+<div class="item" >
+<img src="img/polera2.jpg" alt="Polera 2" />
+<h3>Polera Modelo 2</h3>
+</div>
+
+
+<div class="item" >
+<img src="img/polera3.jpg" alt="Polera 3" />
+<h3>Polera Modelo 3</h3>
+</div>
+</section>
+
+
 <footer>
-  © 2025 Pixel y Pigmento
+<p>© 2025 PIXELYPIGMENTO SpA — Todos los derechos reservados</p>
 </footer>
+<script>
+function agregarProducto() {
+const catalogo = document.querySelector('.catalogo');
+const nuevo = document.querySelector('#plantilla-item').content.cloneNode(true);
+catalogo.appendChild(nuevo);
+}
+</script>
+
+
+<button onclick="agregarProducto()" style="position:fixed; bottom:20px; right:20px; padding:12px 20px; background:#1B2A41; color:white; border:none; border-radius:8px; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.3);">()" style="position:fixed; bottom:20px; right:20px; padding:12px 20px; background:#111827; color:white; border:none; border-radius:8px; cursor:pointer; box-shadow: 0 4px 10px rgba(227,28,121,0.4);">
+Agregar Producto
+</button>
+
+
+<template id="plantilla-item">
+<div class="item" >
+<img src="img/nueva-polera.jpg" alt="Nueva Polera" />
+<h3>Nuevo Modelo</h3>
+</div>
+</template>
 </body>
 </html>
