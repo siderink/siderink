@@ -1,14 +1,73 @@
 :root {
-  --primary: #1B3C59;
-  --background: #FFFFFF;
-  --secondary: #6A4C93;
-  --accent: #F1C40F;
-  --highlight: #00A7C6;
-  --alert: #C0392B;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 25px;
 }
-body { margin:0; font-family: Arial; background: var(--background); }
-header { background: var(--primary); color:white; padding:20px; text-align:center; }
-.catalogo { display:flex; flex-wrap:wrap; justify-content:center; padding:20px; gap:20px;}
-.item { background:#fff; border:1px solid #ddd; padding:10px; width:200px; text-align:center; border-radius:8px; }
-.item img { width:100%; }
-footer { text-align:center; padding:20px; color:#555; }
+
+
+.item {
+background: #000000;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(27,42,65,0.15);
+padding: 15px;
+text-align: center;
+transition: 0.2s;
+}
+
+
+.item:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.item img {
+width: 100%;
+height: 260px;
+object-fit: cover;
+border-radius: 10px;
+background: #000000;
+}
+
+
+.item h3 {
+margin: 15px 0 5px;
+font-size: 1.1rem;
+}
+
+
+footer {
+background: #000000;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+/* Applied palette usage */
+header, .header {
+background: var(--primary);
+color: var(--background);
+padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+color: var(--secondary);
+}
+a:hover, button:hover {
+color: var(--accent);
+}
+.btn-primary {
+background: var(--primary);
+color: var(--background);
+}
+.btn-secondary {
+background: var(--accent);
+color: var(--background);
+}
+.cta, .highlight {
+background: var(--highlight);
+color: var(--primary);
+}
+.alert {
+background: var(--alert);
+color: var(--background);
+}
